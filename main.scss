@@ -1,0 +1,147 @@
+@import "./fontello-5082ef7c/css/fontello.css";
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "PT Serif", serif;
+}
+
+.slide {
+  height: 100vh;
+}
+
+.top {
+  // color: black;
+  background-image: url("pics/backg.jpg");
+  position: relative;
+
+  .headline {
+    padding-top: 12rem;
+    font-size: 7rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .subhed {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    // max-width: 500px;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.go-down {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0px;
+  border-radius: 50%;
+  // border: 1px solid white;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  i {
+    left: 12px;
+    position: relative;
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+#photos {
+  position: relative;
+  width: 100vw;
+  z-index: 10;
+
+  .photo-container {
+    display: inline-block;
+
+    img {
+      clip-path: circle(85px at center);
+      width: 200px;
+      cursor: pointer;
+    }
+  }
+
+  .photo-row {
+    text-align: center;
+  }
+}
+
+.text-slide {
+  font-family: "Open Sans", sans-serif;
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 40vh;
+    font-size: 1.2rem;
+    background-color: #3a3a3a50;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+.pic-description {
+  height: 80px;
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  opacity: 0;
+  z-index: 100;
+  background: rgb(244, 242, 242);
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+
+  p {
+    margin: 10px;
+    font-size: 1rem;
+  }
+
+  &.show {
+    animation-fill-mode: forwards;
+    animation: show 1s infinite;
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+#text-1 {
+  position: relative;
+
+  .wandhama-locator {
+    text-align: right;
+  }
+}

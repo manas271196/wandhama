@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.12.11",
+    "sass": "^1.32.2"
+  },
+  "dependencies": {
+    "d3": "^6.3.1"
+  },
+  "staticFiles": {
+    "staticPath": "pics"
+  }
+}
