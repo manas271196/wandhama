@@ -75,24 +75,37 @@ body {
   position: relative;
   width: 100vw;
   z-index: 10;
-
+  vertical-align: top;
+  text-align: center;
   .photo-container {
     display: inline-block;
+    width: 100px;
 
     img {
-      clip-path: circle(85px at center);
-      width: 120px;
-      margin: 35px;
+      clip-path: circle(50px at center);
+      width: 70px;
+      margin: 15px;
       cursor: pointer;
       &:hover {
-        width: 200px;
-        margin: -5px;
+        width: 150px;
+        margin: -25px;
+        clip-path: circle(80px at center);
+        z-index: 100;
       }
     }
   }
 
   .photo-row {
     text-align: center;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .family-name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
   }
 }
 
@@ -122,6 +135,7 @@ body {
   color: black;
   border-radius: 10px;
   font-weight: bold;
+  pointer-events: none;
 
   p {
     margin: 10px;
@@ -167,7 +181,7 @@ body {
   p {
     // text-align: right;
     // margin-right: 100px;
-    background-color: #3a3a3a80;
+    background-color: #3a3a3aaa;
   }
   .wandhama-house {
     // text-align: right;

@@ -46,37 +46,43 @@ var pics = [
 ];
 
 var x = 0;
-var perRow = 7;
+var perRow = 5;
 
 var desc = d3.select(".pic-description");
 
 // desc.append("p").attr("class", "name").text("Lorem Ipsum");
 // desc.append("p").attr("class", "age").text("XX years");
 
-for (let i = x; i < x + perRow; i++) {
-  var photos = d3.select("#photos > .row-1");
+row = 1;
+while (x < pics.length) {
+  for (let i = x; i < x + perRow && i < pics.length; i++) {
+    var photos = d3.select(`#photos > .row-${row}`);
 
-  var cont = photos.append("div").attr("class", "photo-container");
-  cont.append("img").attr("src", "pics/" + pics[i]);
+    var cont = photos.append("div").attr("class", "photo-container");
+    cont.append("img").attr("src", "pics/" + pics[i]);
+  }
+
+  x += perRow;
+  row++;
 }
 
-x += perRow;
+// x += perRow;
 
-for (let i = x; i < x + perRow; i++) {
-  var photos = d3.select("#photos > .row-2");
+// for (let i = x; i < x + perRow; i++) {
+//   var photos = d3.select("#photos > .row-2");
 
-  var cont = photos.append("div").attr("class", "photo-container");
-  cont.append("img").attr("src", "pics/" + pics[i]);
-}
+//   var cont = photos.append("div").attr("class", "photo-container");
+//   cont.append("img").attr("src", "pics/" + pics[i]);
+// }
 
-x += perRow;
+// x += perRow;
 
-for (let i = x; i < x + perRow && i < pics.length; i++) {
-  var photos = d3.select("#photos > .row-3");
+// for (let i = x; i < x + perRow && i < pics.length; i++) {
+//   var photos = d3.select("#photos > .row-3");
 
-  var cont = photos.append("div").attr("class", "photo-container");
-  cont.append("img").attr("src", "pics/" + pics[i]);
-}
+//   var cont = photos.append("div").attr("class", "photo-container");
+//   cont.append("img").attr("src", "pics/" + pics[i]);
+// }
 
 pics.forEach((pic, i) => {});
 
@@ -94,16 +100,16 @@ d3.selectAll(".photo-container").on("mouseover", function (e) {
   //   y -= 300;
   // }
 
-  desc.style("top", y + 185 + "px");
-  desc.style("left", x + "px");
+  desc.style("top", y + 150 + "px");
+  desc.style("left", x - 15 + "px");
   var rand = name[Math.floor(Math.random() * name.length)];
   desc.select(".name").text(rand[0]);
   desc.select(".age").text(rand[1]);
   // desc.classed("show", true);
-  desc.transition().duration(1000).style("opacity", 1);
+  desc.transition().duration(250).style("opacity", 1);
 });
 
 d3.selectAll(".photo-container").on("mouseout", function (e) {
   // desc.classed("show", false);
-  // desc.transition().duration(1000).style("opacity", 0);
+  desc.transition().duration(250).style("opacity", 0);
 });
