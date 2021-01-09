@@ -13,7 +13,7 @@ body {
 
 .top {
   // color: black;
-  background-image: url("pics/backg.jpg");
+  background-image: url("static/pics/backg.jpg");
   position: relative;
 
   .headline {
@@ -81,8 +81,13 @@ body {
 
     img {
       clip-path: circle(85px at center);
-      width: 200px;
+      width: 120px;
+      margin: 35px;
       cursor: pointer;
+      &:hover {
+        width: 200px;
+        margin: -5px;
+      }
     }
   }
 
@@ -138,10 +143,34 @@ body {
   }
 }
 
-#text-1 {
+#text-map {
   position: relative;
 
   .wandhama-locator {
     text-align: right;
+  }
+}
+
+#text-bodies {
+  p {
+    // text-align: right;
+    // margin-right: 100px;
+    background-color: #3a3a3a80;
+  }
+  .wandhama-bodies {
+    text-align: right;
+    margin-right: 50px;
+  }
+}
+
+#text-house {
+  p {
+    // text-align: right;
+    // margin-right: 100px;
+    background-color: #3a3a3a80;
+  }
+  .wandhama-house {
+    // text-align: right;
+    margin-left: 50px;
   }
 }
