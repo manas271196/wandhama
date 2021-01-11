@@ -168,20 +168,20 @@ body {
   border-radius: 10px;
   z-index: 3;
 }
-.text-slide .slide-pics:hover > img {
+.text-slide:not(#text-map):hover img {
   transform: rotate(5deg);
 }
-.text-slide .slide-pics:hover > .hover-highlight {
+.text-slide:not(#text-map):hover .hover-highlight {
   opacity: 1;
 }
-.text-slide .slide-pics:hover > .no-highlight {
+.text-slide:not(#text-map):hover .no-highlight {
   opacity: 0;
 }
-.text-slide .slide-pics img {
+.text-slide img {
   position: absolute;
   z-index: -1;
 }
-.text-slide .slide-pics > .hover-highlight {
+.text-slide .hover-highlight {
   opacity: 0;
   z-index: 2;
 }
