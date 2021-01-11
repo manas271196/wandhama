@@ -164,7 +164,7 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
 }
-.text-slide p {
+.text-slide p.slide-words {
   max-width: 500px;
   margin: 0 auto;
   position: relative;
@@ -308,7 +308,7 @@ body {
 }
 
 p.darker {
-  background-color: #3a3a3aaa;
+  background-color: #3a3a3ac1 !important;
 }
 
 .text-burning img {
@@ -353,6 +353,30 @@ p.darker {
 }
 .language-toggle span {
   cursor: pointer;
+}
+
+.tweets {
+  text-align: center;
+  position: relative;
+  top: 90px;
+}
+.tweets .tweet {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.tweets .slide-heading {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.tweets .hashtagsa {
+  font-weight: bold;
+}
+
+.news {
+  background-image: url("/news.087b95da.png");
+  background-size: cover;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

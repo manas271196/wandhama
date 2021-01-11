@@ -120,7 +120,7 @@ body {
 .text-slide {
   position: relative;
   font-family: "Open Sans", sans-serif;
-  p {
+  p.slide-words {
     max-width: 500px;
     margin: 0 auto;
     position: relative;
@@ -311,7 +311,7 @@ body {
 }
 
 p.darker {
-  background-color: #3a3a3aaa;
+  background-color: #3a3a3ac1 !important;
 }
 
 .text-burning {
@@ -358,4 +358,28 @@ p.darker {
   width: 150px;
   margin: 50px auto;
   font-family: "Open Sans", sans-serif;
+}
+
+.tweets {
+  text-align: center;
+  position: relative;
+  top: 90px;
+  .tweet {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .slide-heading {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  .hashtagsa {
+    font-weight: bold;
+  }
+}
+
+.news {
+  background-image: url("static/pics/news.png");
+  background-size: cover;
+  height: 100vh;
 }
