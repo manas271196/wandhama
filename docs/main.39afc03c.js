@@ -184,17 +184,17 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"fontello-5082ef7c/css/fontello.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"fontello-4b338c27/css/fontello.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/fontello.eot":[["fontello.8d752fe0.eot","fontello-5082ef7c/font/fontello.eot"],"fontello-5082ef7c/font/fontello.eot"],"./../font/fontello.woff2":[["fontello.28ea02d6.woff2","fontello-5082ef7c/font/fontello.woff2"],"fontello-5082ef7c/font/fontello.woff2"],"./../font/fontello.woff":[["fontello.f4456e50.woff","fontello-5082ef7c/font/fontello.woff"],"fontello-5082ef7c/font/fontello.woff"],"./../font/fontello.ttf":[["fontello.7c3dda99.ttf","fontello-5082ef7c/font/fontello.ttf"],"fontello-5082ef7c/font/fontello.ttf"],"./../font/fontello.svg":[["fontello.ec7c0300.svg","fontello-5082ef7c/font/fontello.svg"],"fontello-5082ef7c/font/fontello.svg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.scss":[function(require,module,exports) {
+},{"./../font/fontello.eot":[["fontello.6c2ac329.eot","fontello-4b338c27/font/fontello.eot"],"fontello-4b338c27/font/fontello.eot"],"./../font/fontello.woff2":[["fontello.46eea958.woff2","fontello-4b338c27/font/fontello.woff2"],"fontello-4b338c27/font/fontello.woff2"],"./../font/fontello.woff":[["fontello.ae31fe86.woff","fontello-4b338c27/font/fontello.woff"],"fontello-4b338c27/font/fontello.woff"],"./../font/fontello.ttf":[["fontello.bb71e4fb.ttf","fontello-4b338c27/font/fontello.ttf"],"fontello-4b338c27/font/fontello.ttf"],"./../font/fontello.svg":[["fontello.4bb7d515.svg","fontello-4b338c27/font/fontello.svg"],"fontello-4b338c27/font/fontello.svg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fontello-5082ef7c/css/fontello.css":"fontello-5082ef7c/css/fontello.css","./static/pics/backg.jpg":[["backg.0f23fdeb.jpg","static/pics/backg.jpg"],"static/pics/backg.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fontello-4b338c27/css/fontello.css":"fontello-4b338c27/css/fontello.css","./static/pics/backg.jpg":[["backg.0f23fdeb.jpg","static/pics/backg.jpg"],"static/pics/backg.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -222,7 +222,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58699" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

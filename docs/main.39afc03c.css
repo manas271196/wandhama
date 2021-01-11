@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('/fontello.8d752fe0.eot?36765111');
-  src: url('/fontello.8d752fe0.eot?36765111#iefix') format('embedded-opentype'),
-       url('/fontello.28ea02d6.woff2?36765111') format('woff2'),
-       url('/fontello.f4456e50.woff?36765111') format('woff'),
-       url('/fontello.7c3dda99.ttf?36765111') format('truetype'),
-       url('/fontello.ec7c0300.svg?36765111#fontello') format('svg');
+  src: url('/fontello.6c2ac329.eot?20525646');
+  src: url('/fontello.6c2ac329.eot?20525646#iefix') format('embedded-opentype'),
+       url('/fontello.46eea958.woff2?20525646') format('woff2'),
+       url('/fontello.ae31fe86.woff?20525646') format('woff'),
+       url('/fontello.bb71e4fb.ttf?20525646') format('truetype'),
+       url('/fontello.4bb7d515.svg?20525646#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?36765111#fontello') format('svg');
+    src: url('../font/fontello.svg?20525646#fontello') format('svg');
   }
 }
 */
@@ -56,6 +56,7 @@
 }
  
 .icon-down-open:before { content: '\e800'; } /* '' */
+.icon-up-open:before { content: '\e807'; } /* '' */
 body {
   margin: 0;
   background-color: black;
@@ -91,14 +92,18 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  bottom: 0px;
+  bottom: 10px;
   border-radius: 50%;
+  border: 2px solid white;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  opacity: 0.9;
+  cursor: pointer;
 }
 .go-down i {
-  left: 12px;
+  left: 14px;
+  top: 11px;
   position: relative;
 }
 
@@ -119,42 +124,44 @@ body {
     transform: translateY(-5px);
   }
 }
-#photos {
+.photos {
   position: relative;
   width: 100vw;
   z-index: 10;
   vertical-align: top;
   text-align: center;
 }
-#photos .photo-container {
+.photos .photo-container {
   display: inline-block;
   width: 100px;
 }
-#photos .photo-container img {
+.photos .photo-container img {
   clip-path: circle(50px at center);
   width: 70px;
   margin: 15px;
   cursor: pointer;
 }
-#photos .photo-container img:hover {
+.photos .photo-container img:hover {
   width: 150px;
   margin: -25px;
   clip-path: circle(80px at center);
   z-index: 100;
 }
-#photos .photo-row {
+.photos .photo-row {
+  margin-top: 150px;
   text-align: center;
   width: 20%;
   display: inline-block;
   vertical-align: top;
 }
-#photos .family-name {
+.photos .family-name {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 .text-slide {
+  position: relative;
   font-family: "Open Sans", sans-serif;
 }
 .text-slide p {
@@ -168,17 +175,18 @@ body {
   border-radius: 10px;
   z-index: 3;
 }
-.text-slide:not(#text-map):hover img {
+.text-slide:not(.text-map):hover img {
   transform: rotate(5deg);
 }
-.text-slide:not(#text-map):hover .hover-highlight {
+.text-slide:not(.text-map):hover .hover-highlight {
   opacity: 1;
 }
-.text-slide:not(#text-map):hover .no-highlight {
+.text-slide:not(.text-map):hover .no-highlight {
   opacity: 0;
 }
-.text-slide img {
+.text-slide:not(.text-map) img {
   position: absolute;
+  top: 10px;
   z-index: -1;
 }
 .text-slide .hover-highlight {
@@ -217,15 +225,20 @@ body {
   }
 }
 
-#text-map {
+.text-map {
   position: relative;
 }
-#text-map .wandhama-locator {
+.text-map .wandhama-locator {
   z-index: -1;
-  position: relative;
-  height: 600px;
+  position: absolute;
+  vertical-align: top;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-#text-map .wandhama-locator .overlay-dot {
+.text-map .wandhama-locator .overlay-dot {
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -239,57 +252,58 @@ body {
     opacity: 0;
   }
 }
-#text-map .wandhama-locator .wandhama-village {
+.text-map .wandhama-locator .wandhama-village {
   opacity: 0;
   height: 50%;
   left: 0;
 }
-#text-map .wandhama-locator:hover .wandhama-village {
+.text-map .wandhama-locator:hover .wandhama-village {
   opacity: 1;
 }
-#text-map .wandhama-locator img {
-  width: 100%;
+.text-map .wandhama-locator img {
+  height: 100%;
   position: absolute;
+  right: 0;
 }
 
-#text-bodies p {
+.text-bodies p {
   background-color: #3a3a3a80;
   z-index: 3;
 }
-#text-bodies .wandhama-bodies:hover img {
+.text-bodies .wandhama-bodies:hover img {
   transform: rotate(5deg);
 }
-#text-bodies .wandhama-bodies:hover .wandhama-bodies-highlight {
+.text-bodies .wandhama-bodies:hover .wandhama-bodies-highlight {
   opacity: 1;
 }
-#text-bodies .wandhama-bodies:hover .wandhama-bodies {
+.text-bodies .wandhama-bodies:hover .wandhama-bodies {
   opacity: 0;
 }
-#text-bodies .wandhama-bodies img {
+.text-bodies .wandhama-bodies img {
   right: 200px;
 }
-#text-bodies .wandhama-bodies .wandhama-bodies-highlight {
+.text-bodies .wandhama-bodies .wandhama-bodies-highlight {
   opacity: 0;
   z-index: 2;
 }
 
-#text-failed img {
+.text-failed img {
   right: 20px;
 }
-#text-failed p {
+.text-failed p {
   right: 100px;
 }
 
-#text-victims {
+.text-victims {
   height: 150vh;
 }
-#text-victims img {
-  height: 100%;
+.text-victims img {
+  height: 600px;
   right: 100px;
   opacity: 80%;
 }
 
-#text-house .wandhama-house {
+.text-house .wandhama-house {
   margin-left: 50px;
 }
 
@@ -297,10 +311,32 @@ p.darker {
   background-color: #3a3a3aaa;
 }
 
-#text-burning img {
-  height: 90%;
+.text-burning img {
+  height: 600px;
   left: 100px;
   opacity: 80%;
+}
+
+.splide__pagination__page {
+  background: #93a313;
+}
+
+.splide__arrow {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  opacity: 1;
+  background: none;
+  color: white;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

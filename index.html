@@ -5,134 +5,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="./main.scss" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link href="./main.scss" rel="stylesheet" />
+
 </head>
 
 <body>
-  <div class="top slide">
-    <h1 class="headline">A nightmare revisited</h1>
-    <p class="subhed">Reliving the Wandhama massacre of 1998. </p>
-    <div class="go-down bounce"><i class="icon-down-open"></i></div>
-  </div>
-
-
-  <div id="text-map" class="slide text-slide">
-    <p>
-      Wandhama is a quiet village in central Kashmir’s Ganderbal district. The name in Kashmiri means ‘hot in winter’
-      i.e. providing comfort to its people.
-    </p>
-    <div class="wandhama-locator">
-      <img src="./static/pics/map.png" />
-      <img class="overlay-dot" src="./static/pics/overlay-dot.png" />
-      <!-- <img class="wandhama-village" src="./static/pics/ganderbal.jpg" /> -->
+  <div class="splide">
+    <div class="splide__arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <i class="icon-up-open"></i>
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <i class="icon-down-open"></i>
+      </button>
     </div>
-  </div>
+    <div class="splide__track">
+      <ul class="splide__list">
+
+        <li class="top splide__slide slide">
+          <h1 class="headline">A nightmare revisited</h1>
+          <p class="subhed">Reliving the Wandhama massacre of 1998. </p>
+          <!-- <div class="go-down bounce"><i class="icon-down-open"></i></div> -->
+        </li>
 
 
-  <div id="text-failed" class="slide text-slide">
-    <p>
-      But on 25th January 1998, Wandhama failed to live upto it's name.
-      It witnessed the killing of 23 Kashmiri Hindus in the dead of the night by unidentified gunmen.
-    </p>
-    <div class="slide-pics">
-      <img class="no-highlight" src="./static/pics/bodies-2.jpg" />
-      <img class="hover-highlight" src="./static/pics/bodies-2-highlight.png" />
-      <!-- <img class=" hover-highlight" src="./static/pics/bodies-2-highlight.jpg" /> -->
-    </div>
-  </div>
-
-  <!-- the gunmen came to their house dressed like Indian Army soldiers, had tea with them, waiting for a radio message indicating that all Hindu families in the village had been covered. After a brief conversation they rounded up all the members of the Hindu households and then summarily gunned them down with Kalashnikov rifles.[8] The massacre was allegedly committed under Abdul Hamid Gada of the Hizbul Mujahideen and was timed to coincide with the Shab-e-Qadar, the holiest night of the month of Ramzan, when believers stay awake until dawn.[9] Gada was subsequently shot dead by Indian security forces in 2000.[10] -->
-
-  <div id="text-solo" class="slide text-slide">
-    <p>
-      The events of that night are recalled by one of the survivors of the incident, a 14-year-old Hindu boy named Vinod
-      Kuman Dhar alias Ashu. The teenager had slipped away and hidden himself in a dark corner of the house.
-    </p>
-
-  </div>
-
-  <div id="text-house" class="slide text-slide">
-    <p class="darker">
-      “The gunmen were dressed like Indian Army soldiers,”, Ashu said piecing the details together. “They had tea with
-      us, waiting for a radio message indicating that all pandit families in the village had been
-      covered.”
-    </p>
-    <div class="wandhama-house slide-pics">
-      <img class="no-highlight" src="./static/pics/house.png" />
-      <img class=" hover-highlight" src="./static/pics/house-highlight.png" />
-    </div>
-  </div>
-
-  <div id="text-bodies" class="slide text-slide">
-    <p>
-      After a brief conversation they rounded up all the members of the Hindu households and then gunned them down with
-      Kalashnikov rifles.
-    </p>
-    <div class="wandhama-bodies slide-pics">
-      <img class="no-highlight" src="./static/pics/wandhama-bodies.jpg" />
-      <img class=" hover-highlight" src="./static/pics/wandhama-bodies-highlight.jpg" />
-    </div>
-  </div>
-
-  <div id="text-burning" class="slide text-slide">
-    <p>
-      There was burning smell of the human flesh everywhere. A mother had unsuccessfully tried to save her infant by
-      hiding him in her lap but both got killed together. The cop trying to separate them couldn’t.
-    </p>
-    <div class="slide-pics">
-      <img class="no-highlight" src="./static/pics/victim-child.png" />
-      <img class=" hover-highlight" src="./static/pics/victim-child.png" />
-    </div>
-  </div>
-
-  <!-- <div id="text-stay" class="slide text-slide">
-    <p>
-      Those killed that night had chosen to stay in the valley despite the fact
-      that majority of their community members had migrated in 1990.
-    </p>
-  </div> -->
-
-  <div id="text-victims" class="slide text-slide">
-    <p class="darker">
-      The neighbourhood had changed forever.
-      The victims included 10 men, 9 women and 4 children.
-      <span style="margin-top: 20px; display: block;">These are their stories.</span>
-    </p>
-    <div class="slide-pics">
-      <img class="no-highlight" src="./static/pics/wandhama-victims.png" />
-      <img class="hover-highlight" src="./static/pics/wandhama-victims.png" />
-    </div>
-  </div>
+        <li class="text-map splide__slide slide text-slide">
+          <p>
+            Wandhama is a quiet village in central Kashmir’s Ganderbal district. The name in Kashmiri means ‘hot in
+            winter’
+            i.e. providing comfort to its people.
+          </p>
+          <div class="wandhama-locator">
+            <img src="./static/pics/map.png" />
+            <img class="overlay-dot" src="./static/pics/overlay-dot.png" />
+            <!-- <img class="wandhama-village" src="./static/pics/ganderbal.jpg" /> -->
+          </div>
+        </li>
 
 
+        <li class="text-failed splide__slide slide text-slide">
+          <p>
+            But on 25th January 1998, Wandhama failed to live upto it's name.
+            It witnessed the killing of 23 Kashmiri Hindus in the dead of the night by unidentified gunmen.
+          </p>
+          <div class="slide-pics">
+            <img class="no-highlight" src="./static/pics/bodies-2.jpg" />
+            <img class="hover-highlight" src="./static/pics/bodies-2-highlight.png" />
+            <!-- <img class=" hover-highlight" src="./static/pics/bodies-2-highlight.jpg" /> -->
+          </div>
+        </li>
 
+        <!-- the gunmen came to their house dressed like Indian Army soldiers, had tea with them, waiting for a radio message indicating that all Hindu families in the village had been covered. After a brief conversation they rounded up all the members of the Hindu households and then summarily gunned them down with Kalashnikov rifles.[8] The massacre was allegedly committed under Abdul Hamid Gada of the Hizbul Mujahideen and was timed to coincide with the Shab-e-Qadar, the holiest night of the month of Ramzan, when believers stay awake until dawn.[9] Gada was subsequently shot dead by Indian security forces in 2000.[10] -->
 
-  <!-- <div id="text-3" class="slide text-slide">
-    <p>
-      Lone survivor, a 12-year-old boy, Vinod Kumar aka Ashu, the locals said that he had miraculously escaped as he hid
-      himself under a pack of heavy straw nearby to his home.
-    </p>
-  </div> -->
+        <li class="text-solo splide__slide slide text-slide">
+          <p>
+            The events of that night are recalled by one of the survivors of the incident, a 14-year-old Hindu boy named
+            Vinod
+            Kuman Dhar alias Ashu. The teenager had slipped away and hidden himself in a dark corner of the house.
+          </p>
 
-  <div id="photos" class="slide">
-    <div class="photo-row row-1">
-      <p class="family-name">X Family</p>
-    </div>
-    <div class="photo-row row-2">
-      <p class="family-name">Y Family</p>
-    </div>
-    <div class="photo-row row-3">
-      <p class="family-name">Z family</p>
-    </div>
-    <div class="photo-row row-4">
-      <p class="family-name">W family</p>
-    </div>
-    <div class="pic-description">
-      <p class="name"></p>
-      <p class="age"></p>
+        </li>
+
+        <li class="text-house splide__slide slide text-slide">
+          <p class="darker">
+            “The gunmen were dressed like Indian Army soldiers,”, Ashu said piecing the details together. “They had tea
+            with
+            us, waiting for a radio message indicating that all pandit families in the village had been
+            covered.”
+          </p>
+          <div class="wandhama-house slide-pics">
+            <img class="no-highlight" src="./static/pics/house.png" />
+            <img class=" hover-highlight" src="./static/pics/house-highlight.png" />
+          </div>
+        </li>
+
+        <li class="text-bodies splide__slide slide text-slide">
+          <p>
+            After a brief conversation they rounded up all the members of the Hindu households and then gunned them down
+            with
+            Kalashnikov rifles.
+          </p>
+          <div class="wandhama-bodies slide-pics">
+            <img class="no-highlight" src="./static/pics/wandhama-bodies.jpg" />
+            <img class=" hover-highlight" src="./static/pics/wandhama-bodies-highlight.jpg" />
+          </div>
+        </li>
+
+        <li class="text-burning splide__slide slide text-slide">
+          <p>
+            There was burning smell of the human flesh everywhere. A mother had unsuccessfully tried to save her infant
+            by
+            hiding him in her lap but both got killed together. The cop trying to separate them couldn’t.
+          </p>
+          <div class="slide-pics">
+            <img class="no-highlight" src="./static/pics/victim-child.png" />
+            <img class=" hover-highlight" src="./static/pics/victim-child.png" />
+          </div>
+        </li>
+
+        <li class="text-victims splide__slide slide text-slide">
+          <p class="darker">
+            The neighbourhood had changed forever.
+            The victims included 10 men, 9 women and 4 children.
+            <span style="margin-top: 20px; display: block;">These are their stories.</span>
+          </p>
+          <div class="slide-pics">
+            <img class="no-highlight" src="./static/pics/wandhama-victims.png" />
+            <img class="hover-highlight" src="./static/pics/wandhama-victims.png" />
+          </div>
+        </li>
+
+        <li class="photos splide__slide slide">
+          <div class="photo-row row-1">
+            <p class="family-name">X Family</p>
+          </div>
+          <div class="photo-row row-2">
+            <p class="family-name">Y Family</p>
+          </div>
+          <div class="photo-row row-3">
+            <p class="family-name">Z family</p>
+          </div>
+          <div class="photo-row row-4">
+            <p class="family-name">W family</p>
+          </div>
+          <div class="pic-description">
+            <p class="name"></p>
+            <p class="age"></p>
+          </div>
+        </li>
+
+      </ul>
     </div>
   </div>
 

@@ -56,7 +56,7 @@ var desc = d3.select(".pic-description");
 row = 1;
 while (x < pics.length) {
   for (let i = x; i < x + perRow && i < pics.length; i++) {
-    var photos = d3.select(`#photos > .row-${row}`);
+    var photos = d3.select(`.photos > .row-${row}`);
 
     var cont = photos.append("div").attr("class", "photo-container");
     cont.append("img").attr("src", "pics/" + pics[i]);
@@ -112,4 +112,33 @@ d3.selectAll(".photo-container").on("mouseover", function (e) {
 d3.selectAll(".photo-container").on("mouseout", function (e) {
   // desc.classed("show", false);
   desc.transition().duration(250).style("opacity", 0);
+});
+
+var maxSlide;
+
+d3.selectAll(".slide").attr("data-slide", function (d, i) {
+  return i;
+});
+
+// d3.selectAll(".go-down").on("click", function (e) {
+//   var slideNum = e.target.parentElement.dataset.slide;
+//   var h = window.innerHeight;
+
+//   console.log(slideNum);
+
+//   $("html, body").animate(
+//     {
+//       scrollTop: h * (slideNum + 1),
+//     },
+//     500
+//   );
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".splide", {
+    autoHeight: true,
+    width: "100vw",
+    height: "100vh",
+    direction: "ttb",
+  }).mount();
 });
