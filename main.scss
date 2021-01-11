@@ -3,8 +3,12 @@
 body {
   margin: 0;
   background-color: black;
+  background-image: url("static/pics/backg.jpg");
+  background-repeat: repeat;
+  // background-size: 20px;
   color: white;
   font-family: "PT Serif", serif;
+  overflow-x: hidden;
 }
 
 .slide {
@@ -13,7 +17,7 @@ body {
 
 .top {
   // color: black;
-  background-image: url("static/pics/backg.jpg");
+  // background-image: url("static/pics/backg.png");
   position: relative;
 
   .headline {
@@ -120,6 +124,33 @@ body {
     background-color: #3a3a3a50;
     padding: 20px;
     border-radius: 10px;
+    z-index: 3;
+  }
+
+  .slide-pics {
+    // text-align: right;
+    // margin-right: 50px;
+    &:hover {
+      > img {
+        transform: rotate(5deg);
+      }
+      > .hover-highlight {
+        opacity: 1;
+      }
+      > .no-highlight {
+        opacity: 0;
+      }
+    }
+
+    img {
+      position: absolute;
+      z-index: -1;
+    }
+
+    > .hover-highlight {
+      opacity: 0;
+      z-index: 2;
+    }
   }
 }
 
@@ -161,7 +192,43 @@ body {
   position: relative;
 
   .wandhama-locator {
-    text-align: right;
+    z-index: -1;
+    position: relative;
+
+    .overlay-dot {
+      animation: pulse 2s infinite;
+      @keyframes pulse {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    .wandhama-village {
+      opacity: 0;
+      height: 50%;
+      left: 0;
+    }
+
+    &:hover {
+      .wandhama-village {
+        opacity: 1;
+      }
+    }
+
+    height: 600px;
+    // text-align: right;
+    img {
+      // right: 20px;
+      width: 100%;
+      position: absolute;
+      // height: 100%;
+    }
   }
 }
 
@@ -170,21 +237,69 @@ body {
     // text-align: right;
     // margin-right: 100px;
     background-color: #3a3a3a80;
+    z-index: 3;
   }
   .wandhama-bodies {
-    text-align: right;
-    margin-right: 50px;
+    // text-align: right;
+    // margin-right: 50px;
+    &:hover {
+      img {
+        transform: rotate(5deg);
+      }
+      .wandhama-bodies-highlight {
+        opacity: 1;
+      }
+      .wandhama-bodies {
+        opacity: 0;
+      }
+    }
+    img {
+      right: 200px;
+    }
+
+    .wandhama-bodies-highlight {
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+}
+
+#text-failed {
+  img {
+    right: 20px;
+  }
+  p {
+    right: 100px;
+  }
+  // p {
+  //   background-color: #3a3a3aaa;
+  // }
+}
+
+#text-victims {
+  height: 150vh;
+  img {
+    height: 100%;
+    right: 100px;
+    opacity: 80%;
   }
 }
 
 #text-house {
-  p {
-    // text-align: right;
-    // margin-right: 100px;
-    background-color: #3a3a3aaa;
-  }
   .wandhama-house {
     // text-align: right;
     margin-left: 50px;
+  }
+}
+
+p.darker {
+  background-color: #3a3a3aaa;
+}
+
+#text-burning {
+  img {
+    height: 90%;
+    left: 100px;
+    opacity: 80%;
   }
 }
