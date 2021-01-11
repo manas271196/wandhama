@@ -142,3 +142,18 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "ttb",
   }).mount();
 });
+
+d3.selectAll(".language-selection").on("click", function (e) {
+  console.log(e.target);
+  if (e.target.dataset.lang === "eng") {
+    d3.selectAll(".urdu-text").style("display", "none");
+    d3.selectAll(".english-text").style("display", "block");
+  }
+  if (e.target.dataset.lang === "urdu") {
+    d3.selectAll(".english-text").style("display", "none");
+    d3.selectAll(".urdu-text").style("display", "block");
+  }
+});
+
+d3.selectAll(".urdu-text").style("display", "none");
+d3.selectAll(".english-text").style("display", "block");

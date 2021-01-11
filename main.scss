@@ -343,3 +343,19 @@ p.darker {
   color: white;
   font-size: 20px;
 }
+
+.language-toggle {
+  z-index: 10000;
+  p {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+  }
+  span {
+    cursor: pointer;
+  }
+  width: 150px;
+  margin: 50px auto;
+  font-family: "Open Sans", sans-serif;
+}

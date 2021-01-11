@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   <link href="./main.scss" rel="stylesheet" />
 
 </head>
@@ -30,15 +32,29 @@
         <li class="top splide__slide slide">
           <h1 class="headline">A nightmare revisited</h1>
           <p class="subhed">Reliving the Wandhama massacre of 1998. </p>
+          <label class="language-toggle switch-light switch-candy" onclick="">
+            <input type="checkbox">
+
+            <p>Select language</p>
+
+            <span>
+              <span data-lang="eng" class="language-selection">English</span>
+              <span data-lang="urdu" class="language-selection">اردو</span>
+              <a></a>
+            </span>
+          </label>
+
           <!-- <div class="go-down bounce"><i class="icon-down-open"></i></div> -->
         </li>
 
 
         <li class="text-map splide__slide slide text-slide">
           <p>
-            Wandhama is a quiet village in central Kashmir’s Ganderbal district. The name in Kashmiri means ‘hot in
-            winter’
-            i.e. providing comfort to its people.
+            <span class="urdu-text">نمونہ متن
+            </span>
+            <span class="english-text">Wandhama is a quiet village in central Kashmir’s Ganderbal district. The name in
+              Kashmiri means ‘hot in winter’ i.e. providing comfort to its people.
+            </span>
           </p>
           <div class="wandhama-locator">
             <img src="./static/pics/map.png" />
@@ -50,8 +66,10 @@
 
         <li class="text-failed splide__slide slide text-slide">
           <p>
-            But on 25th January 1998, Wandhama failed to live upto it's name.
-            It witnessed the killing of 23 Kashmiri Hindus in the dead of the night by unidentified gunmen.
+            <span class="urdu-text">نمونہ متن</span>
+
+            <span class="english-text"> But on 25th January 1998, Wandhama failed to live upto it's name. It witnessed
+              the killing of 23 Kashmiri Hindus in the dead of the night by unidentified gunmen.</span>
           </p>
           <div class="slide-pics">
             <img class="no-highlight" src="./static/pics/bodies-2.jpg" />
@@ -64,19 +82,25 @@
 
         <li class="text-solo splide__slide slide text-slide">
           <p>
-            The events of that night are recalled by one of the survivors of the incident, a 14-year-old Hindu boy named
-            Vinod
-            Kuman Dhar alias Ashu. The teenager had slipped away and hidden himself in a dark corner of the house.
+            <span class="urdu-text">نمونہ متن</span>
+
+            <span class="english-text">The events of that night are recalled by one of the survivors of the incident, a
+              14-year-old Hindu boy named Vinod Kuman Dhar alias Ashu. The teenager had slipped away and hidden himself
+              in a dark corner of the house.</span>
+
           </p>
 
         </li>
 
         <li class="text-house splide__slide slide text-slide">
           <p class="darker">
-            “The gunmen were dressed like Indian Army soldiers,”, Ashu said piecing the details together. “They had tea
-            with
-            us, waiting for a radio message indicating that all pandit families in the village had been
-            covered.”
+            <span class="urdu-text">نمونہ متن</span>
+
+            <span class="english-text"> “The gunmen were dressed like Indian Army soldiers,”, Ashu said piecing the
+              details together. “They had tea with us, waiting for a radio message indicating that all pandit families
+              in the village had been covered.”
+            </span>
+
           </p>
           <div class="wandhama-house slide-pics">
             <img class="no-highlight" src="./static/pics/house.png" />
@@ -86,9 +110,11 @@
 
         <li class="text-bodies splide__slide slide text-slide">
           <p>
-            After a brief conversation they rounded up all the members of the Hindu households and then gunned them down
-            with
-            Kalashnikov rifles.
+            <span class="urdu-text">نمونہ متن</span>
+
+            <span class="english-text"> After a brief conversation they rounded up all the members of the Hindu
+              households and then gunned them down with Kalashnikov rifles.
+            </span>
           </p>
           <div class="wandhama-bodies slide-pics">
             <img class="no-highlight" src="./static/pics/wandhama-bodies.jpg" />
@@ -98,9 +124,12 @@
 
         <li class="text-burning splide__slide slide text-slide">
           <p>
-            There was burning smell of the human flesh everywhere. A mother had unsuccessfully tried to save her infant
-            by
-            hiding him in her lap but both got killed together. The cop trying to separate them couldn’t.
+            <span class="urdu-text">نمونہ متن</span>
+
+            <span class="english-text"> There was burning smell of the human flesh everywhere. A mother had
+              unsuccessfully tried to save her infant by hiding him in her lap but both got killed together. The cop
+              trying to separate them couldn’t.
+            </span>
           </p>
           <div class="slide-pics">
             <img class="no-highlight" src="./static/pics/victim-child.png" />
@@ -110,9 +139,12 @@
 
         <li class="text-victims splide__slide slide text-slide">
           <p class="darker">
-            The neighbourhood had changed forever.
-            The victims included 10 men, 9 women and 4 children.
-            <span style="margin-top: 20px; display: block;">These are their stories.</span>
+            <span class="urdu-text"> <span style="margin-top: 20px; display: block;">These are their stories.</span>
+            </span>
+
+            <span class="english-text"> The neighbourhood had changed forever. The victims included 10 men, 9 women and
+              4 children. <span style="margin-top: 20px; display: block;">These are their stories.</span>
+            </span>
           </p>
           <div class="slide-pics">
             <img class="no-highlight" src="./static/pics/wandhama-victims.png" />
@@ -138,6 +170,15 @@
             <p class="age"></p>
           </div>
         </li>
+
+        <li class="text-victims splide__slide slide text-slide">
+          <p class="darker">
+            Social media reactions
+          </p>
+          <div class="slide-pics">
+          </div>
+        </li>
+
 
       </ul>
     </div>
