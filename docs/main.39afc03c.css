@@ -174,20 +174,26 @@ body {
   padding: 20px;
   border-radius: 10px;
   z-index: 3;
+  pointer-events: none;
 }
-.text-slide:not(.text-map):hover img {
+.text-slide:not(.text-map):not(.text-news) .slide-pics:hover img {
   transform: rotate(5deg);
 }
-.text-slide:not(.text-map):hover .hover-highlight {
+.text-slide:not(.text-map):not(.text-news) .slide-pics:hover .hover-highlight {
   opacity: 1;
 }
-.text-slide:not(.text-map):hover .no-highlight {
+.text-slide:not(.text-map):not(.text-news) .slide-pics:hover .no-highlight {
   opacity: 0;
+}
+.text-slide:not(.text-map) .slide-pics {
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+  width: 600px;
+  height: 100%;
 }
 .text-slide:not(.text-map) img {
   position: absolute;
-  top: 10px;
-  z-index: -1;
 }
 .text-slide .hover-highlight {
   opacity: 0;
@@ -270,36 +276,21 @@ body {
   background-color: #3a3a3a80;
   z-index: 3;
 }
-.text-bodies .wandhama-bodies:hover img {
-  transform: rotate(5deg);
-}
-.text-bodies .wandhama-bodies:hover .wandhama-bodies-highlight {
-  opacity: 1;
-}
-.text-bodies .wandhama-bodies:hover .wandhama-bodies {
-  opacity: 0;
-}
-.text-bodies .wandhama-bodies img {
-  right: 200px;
-}
-.text-bodies .wandhama-bodies .wandhama-bodies-highlight {
-  opacity: 0;
-  z-index: 2;
+.text-bodies .slide-pics {
+  right: 10px;
+  top: 10px !important;
 }
 
-.text-failed img {
-  right: 20px;
-}
-.text-failed p {
+.text-failed .slide-pics {
   right: 100px;
+  top: 50px !important;
 }
 
-.text-victims {
-  height: 150vh;
+.text-victims .slide-pics {
+  right: 80px;
 }
 .text-victims img {
   height: 600px;
-  right: 100px;
   opacity: 80%;
 }
 
@@ -311,14 +302,22 @@ p.darker {
   background-color: #3a3a3ac1 !important;
 }
 
-.text-burning img {
+.text-burning .slide-pics {
   height: 600px;
   left: 100px;
   opacity: 80%;
 }
+.text-burning img {
+  height: 100%;
+}
 
 .splide__pagination__page {
-  background: #93a313;
+  background: #6a0000;
+  border: 1px solid #ff8787;
+}
+
+.splide__pagination__page.is-active {
+  background: #ff7979;
 }
 
 .splide__arrow {
