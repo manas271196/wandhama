@@ -21,7 +21,7 @@ body {
   position: relative;
 
   .headline {
-    padding-top: 12rem;
+    padding-top: 10rem;
     font-size: 7rem;
     margin-bottom: 1rem;
     margin-top: 0;
@@ -34,6 +34,13 @@ body {
     margin: 0 auto;
     // max-width: 500px;
     font-family: "Open Sans", sans-serif;
+  }
+  .byline {
+    font-size: 1.4rem;
+    font-family: "PT Serif", serif;
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0;
   }
 }
 
