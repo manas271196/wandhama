@@ -344,6 +344,16 @@ p.darker {
     height: 600px;
     left: 100px;
     opacity: 0.8;
+    &.child-pic {
+      right: 100px;
+      left: auto;
+      top: 100px;
+      img {
+        height: 400px;
+        left: auto;
+        right: 0px;
+      }
+    }
   }
   img {
     height: 100%;
