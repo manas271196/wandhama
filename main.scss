@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: black;
   background-image: url("static/pics/backg.jpg");
+  background-position: center;
   background-repeat: repeat;
   // background-size: 20px;
   color: white;
@@ -93,13 +94,15 @@ body {
   text-align: center;
   .photo-container {
     display: inline-block;
-    width: 100px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
 
     img {
       clip-path: circle(50px at center);
       width: 70px;
       margin: 15px;
-      cursor: pointer;
+      pointer-events: none;
       &:hover {
         width: 150px;
         margin: -25px;
@@ -110,9 +113,9 @@ body {
   }
 
   .photo-row {
-    margin-top: 150px;
+    margin-top: 70px;
     text-align: center;
-    width: 20%;
+    width: 70%;
     display: inline-block;
     vertical-align: top;
   }
@@ -127,6 +130,7 @@ body {
 .text-slide {
   position: relative;
   font-family: "Open Sans", sans-serif;
+  overflow-y: hidden;
   p.slide-words {
     max-width: 500px;
     margin: 0 auto;
@@ -347,9 +351,9 @@ p.darker {
     &.child-pic {
       right: 100px;
       left: auto;
-      top: 100px;
+      top: 0px;
       img {
-        height: 400px;
+        height: 600px;
         left: auto;
         right: 0px;
       }
@@ -402,31 +406,182 @@ p.darker {
   margin: 50px auto;
   font-family: "Open Sans", sans-serif;
 }
+.text-tweets {
+  background-image: url("static/pics/tweets.png");
+  background-size: cover;
+  .tweets {
+    text-align: center;
+    position: relative;
+    top: 40px;
+    color: black;
 
-.tweets {
-  text-align: center;
-  position: relative;
-  top: 90px;
-  .tweet {
-    padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  .slide-heading {
-    font-weight: bold;
-    font-size: 1.4rem;
-  }
-  .hashtagsa {
-    font-weight: bold;
+    .tweet {
+      padding: 10px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .slide-heading {
+      font-weight: bold;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px white, 1px -1px 3px white, -1px 1px 3px white;
+    }
+    .hashtags {
+      font-weight: bold;
+      text-shadow: 1px 1px 3px white, 1px -1px 3px white, -1px 1px 3px white;
+    }
   }
 }
 
 .news {
   background-image: url("static/pics/news.png");
   background-size: cover;
+  background-position: center;
   height: 100vh;
+
+  position: relative;
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    p {
+      position: absolute;
+      font-size: 10rem;
+      font-weight: bold;
+      // width: 100%;
+      // height: 100%;
+      margin: 0px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 1px 1px 10px black;
+      font-family: "PT Serif", serif;
+    }
+  }
   // img {
   //   display: inline-block;
   //   max-width: 300px;
   // }
+}
+
+.hide-on-desktop {
+  display: block;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .top {
+    .headline {
+      font-size: 3rem;
+    }
+    .subhed {
+      max-width: 250px;
+      font-size: 1.2rem;
+    }
+  }
+  .slide-pics {
+    width: 100% !important;
+    position: relative;
+  }
+  .slide-pics {
+    right: 0;
+    left: 0;
+
+    img {
+      width: 95%;
+      top: 10%;
+      left: 2.5%;
+      max-height: 100%;
+      // right: 0px;
+      // left: 0px;
+    }
+  }
+  .text-house .wandhama-house {
+    margin-left: 0px;
+  }
+  .text-burning .slide-pics {
+    left: 0px;
+    opacity: 0.8;
+    &.child-pic {
+      right: 0px;
+      img {
+        max-width: 90%;
+        height: auto;
+      }
+      top: 0px;
+    }
+  }
+  .text-victims {
+    img {
+      height: auto;
+      width: 95%;
+      top: 10%;
+    }
+  }
+  .news {
+    background-image: url("static/pics/news-mobile.png");
+    div {
+      p {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .hide-on-mobile {
+    display: block;
+  }
+
+  .text-tweets {
+    .tweets {
+      top: 40px;
+      .tweet {
+        width: 80%;
+        height: 100%;
+        padding: 0px;
+      }
+    }
+  }
+
+  .photos {
+    .photo-row {
+      width: 100%;
+      .photo-container {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+
+        img {
+          clip-path: circle(50px at center);
+          width: 60px;
+          margin: 15px;
+          pointer-events: none;
+          &:hover {
+            width: 150px;
+            margin: -25px;
+            clip-path: circle(80px at center);
+            z-index: 100;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .photos {
+    .photo-row {
+      width: 100%;
+      margin-top: 120px;
+    }
+  }
 }

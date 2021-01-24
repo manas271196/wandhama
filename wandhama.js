@@ -45,50 +45,63 @@ var pics = [
   "Asset 19.png",
 ];
 
+/*
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  ["Smt. Deviki ", 12],
+  [],
+  ["Smt. Asha Ji ", 13],
+  [],
+  [],
+  [],
+*/
+
+var families = [
+  ["Asset 1.png", "Predman Bhat", 45],
+  ["Asset 2.png", "Rakesh Bhat", 23],
+  ["Asset 3.png", "Amit Bhat", 19],
+  ["Asset 6.png", "Princy Bhat", 29],
+  ["Asset 9.png", "Rajani Bhat", 43],
+  ["Asset 12.png", "Girja Bhat", 41],
+  ["Asset 11.png", "Preetma Bhat", 22],
+  ["Asset 13.png", "Sh Laas Koul", 42],
+  ["Asset 5.png", "Sh. Radha Krishen", 13],
+  ["Asset 4.png", "Sh. Bansi Lal", 35],
+  ["Asset 7.png", "Sh. Bandi Lal ", 26],
+  ["Asset 14.png", "Sh. Mohan Lal", 40],
+  ["Asset 8.png", "Sh. Triloki Nath", 27],
+  ["Asset 10.png", "Amit Bhat", 19],
+  ["Asset 15.png", "Smt. Geeta ", 40],
+  ["Asset 16.png", "Smt. Chand Rani", 28],
+  ["Asset 17.png", "Sh. Lok Nath ", 42],
+  ["Asset 18.png", "Sh. Avatar Kishan", 27],
+  ["Asset 19.png", "Sushma Bhat", 13],
+];
+
 var x = 0;
 var perRow = 5;
 
 var desc = d3.select(".pic-description");
 
-// desc.append("p").attr("class", "name").text("Lorem Ipsum");
-// desc.append("p").attr("class", "age").text("XX years");
+// while (x < pics.length) {
+for (let i = 0; i < families.length; i++) {
+  var photos = d3.select(`.photos > .photo-row`);
 
-row = 1;
-while (x < pics.length) {
-  for (let i = x; i < x + perRow && i < pics.length; i++) {
-    var photos = d3.select(`.photos > .row-${row}`);
+  var cont = photos
+    .append("div")
+    .attr("class", "photo-container")
+    .attr("data-name", families[i][1])
+    .attr("data-age", families[i][2]);
 
-    var cont = photos.append("div").attr("class", "photo-container");
-    cont.append("img").attr("src", "pics/" + pics[i]);
-  }
-
-  x += perRow;
-  row++;
+  cont.append("img").attr("src", "pics/" + families[i][0]);
 }
-
-// x += perRow;
-
-// for (let i = x; i < x + perRow; i++) {
-//   var photos = d3.select("#photos > .row-2");
-
-//   var cont = photos.append("div").attr("class", "photo-container");
-//   cont.append("img").attr("src", "pics/" + pics[i]);
 // }
-
-// x += perRow;
-
-// for (let i = x; i < x + perRow && i < pics.length; i++) {
-//   var photos = d3.select("#photos > .row-3");
-
-//   var cont = photos.append("div").attr("class", "photo-container");
-//   cont.append("img").attr("src", "pics/" + pics[i]);
-// }
-
-pics.forEach((pic, i) => {});
-
-d3.select(".go-down").on("click", () => {
-  window.scrollBy(window.innerHeight);
-});
 
 d3.selectAll(".photo-container").on("mouseover", function (e) {
   var pic = e.target;
@@ -102,9 +115,11 @@ d3.selectAll(".photo-container").on("mouseover", function (e) {
 
   desc.style("top", y + 150 + "px");
   desc.style("left", x - 15 + "px");
-  var rand = name[Math.floor(Math.random() * name.length)];
-  desc.select(".name").text(rand[0]);
-  desc.select(".age").text(rand[1]);
+
+  console.log(pic.dataset.name, pic.dataset.age);
+
+  desc.select(".name").text(pic.dataset.name);
+  desc.select(".age").text(pic.dataset.age);
   // desc.classed("show", true);
   desc.transition().duration(250).style("opacity", 1);
 });

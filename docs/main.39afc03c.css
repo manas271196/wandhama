@@ -61,6 +61,7 @@ body {
   margin: 0;
   background-color: black;
   background-image: url("/backg.0f23fdeb.jpg");
+  background-position: center;
   background-repeat: repeat;
   color: white;
   font-family: "PT Serif", serif;
@@ -140,13 +141,15 @@ body {
 }
 .photos .photo-container {
   display: inline-block;
-  width: 100px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
 }
 .photos .photo-container img {
   clip-path: circle(50px at center);
   width: 70px;
   margin: 15px;
-  cursor: pointer;
+  pointer-events: none;
 }
 .photos .photo-container img:hover {
   width: 150px;
@@ -155,9 +158,9 @@ body {
   z-index: 100;
 }
 .photos .photo-row {
-  margin-top: 150px;
+  margin-top: 70px;
   text-align: center;
-  width: 20%;
+  width: 70%;
   display: inline-block;
   vertical-align: top;
 }
@@ -170,6 +173,7 @@ body {
 .text-slide {
   position: relative;
   font-family: "Open Sans", sans-serif;
+  overflow-y: hidden;
 }
 .text-slide p.slide-words {
   max-width: 500px;
@@ -317,10 +321,10 @@ p.darker {
 .text-burning .slide-pics.child-pic {
   right: 100px;
   left: auto;
-  top: 100px;
+  top: 0px;
 }
 .text-burning .slide-pics.child-pic img {
-  height: 400px;
+  height: 600px;
   left: auto;
   right: 0px;
 }
@@ -371,28 +375,164 @@ p.darker {
   cursor: pointer;
 }
 
-.tweets {
+.text-tweets {
+  background-image: url("/tweets.eb978615.png");
+  background-size: cover;
+}
+.text-tweets .tweets {
   text-align: center;
   position: relative;
-  top: 90px;
+  top: 40px;
+  color: black;
 }
-.tweets .tweet {
+.text-tweets .tweets .tweet {
   padding: 10px;
   display: inline-block;
   vertical-align: top;
 }
-.tweets .slide-heading {
+.text-tweets .tweets .slide-heading {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px white, 1px -1px 3px white, -1px 1px 3px white;
 }
-.tweets .hashtagsa {
+.text-tweets .tweets .hashtags {
   font-weight: bold;
+  text-shadow: 1px 1px 3px white, 1px -1px 3px white, -1px 1px 3px white;
 }
 
 .news {
   background-image: url("/news.087b95da.png");
   background-size: cover;
+  background-position: center;
   height: 100vh;
+  position: relative;
+}
+.news div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.news div p {
+  position: absolute;
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px 10px black;
+  font-family: "PT Serif", serif;
+}
+
+.hide-on-desktop {
+  display: block;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .top .headline {
+    font-size: 3rem;
+  }
+  .top .subhed {
+    max-width: 250px;
+    font-size: 1.2rem;
+  }
+
+  .slide-pics {
+    width: 100% !important;
+    position: relative;
+  }
+
+  .slide-pics {
+    right: 0;
+    left: 0;
+  }
+  .slide-pics img {
+    width: 95%;
+    top: 10%;
+    left: 2.5%;
+    max-height: 100%;
+  }
+
+  .text-house .wandhama-house {
+    margin-left: 0px;
+  }
+
+  .text-burning .slide-pics {
+    left: 0px;
+    opacity: 0.8;
+  }
+  .text-burning .slide-pics.child-pic {
+    right: 0px;
+    top: 0px;
+  }
+  .text-burning .slide-pics.child-pic img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .text-victims img {
+    height: auto;
+    width: 95%;
+    top: 10%;
+  }
+
+  .news {
+    background-image: url("/news-mobile.6043bd3f.png");
+  }
+  .news div p {
+    font-size: 6rem;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .hide-on-mobile {
+    display: block;
+  }
+
+  .text-tweets .tweets {
+    top: 40px;
+  }
+  .text-tweets .tweets .tweet {
+    width: 80%;
+    height: 100%;
+    padding: 0px;
+  }
+
+  .photos .photo-row {
+    width: 100%;
+  }
+  .photos .photo-row .photo-container {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .photos .photo-row .photo-container img {
+    clip-path: circle(50px at center);
+    width: 60px;
+    margin: 15px;
+    pointer-events: none;
+  }
+  .photos .photo-row .photo-container img:hover {
+    width: 150px;
+    margin: -25px;
+    clip-path: circle(80px at center);
+    z-index: 100;
+  }
+}
+@media (max-width: 769px) {
+  .photos .photo-row {
+    width: 100%;
+    margin-top: 120px;
+  }
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
